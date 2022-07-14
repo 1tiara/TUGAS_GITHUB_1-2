@@ -1,0 +1,248 @@
+TKJ@DESKTOP-84NGV0C MINGW64 ~/git-basic (master)
+$ mkdir 1tiara
+
+TKJ@DESKTOP-84NGV0C MINGW64 ~/git-basic (master)
+$ cd 1tiara
+
+TKJ@DESKTOP-84NGV0C MINGW64 ~/git-basic/1tiara (master)
+$ touch README.md
+
+TKJ@DESKTOP-84NGV0C MINGW64 ~/git-basic/1tiara (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        ./
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+TKJ@DESKTOP-84NGV0C MINGW64 ~/git-basic/1tiara (master)
+$ git add .
+
+TKJ@DESKTOP-84NGV0C MINGW64 ~/git-basic/1tiara (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   README.md
+
+
+TKJ@DESKTOP-84NGV0C MINGW64 ~/git-basic/1tiara (master)
+$ git commit -m "halo perkenalkan aku halaman utama"
+[master 3e6a8d7] halo perkenalkan aku halaman utama
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 1tiara/README.md
+
+TKJ@DESKTOP-84NGV0C MINGW64 ~/git-basic/1tiara (master)
+$ git log
+commit 3e6a8d7a6ac52d263a14359ef358a2500cd9f0d9 (HEAD -> master)
+Author: 1tiara <nurfadhilahmutiara@gmail.com>
+Date:   Thu Jul 7 11:10:11 2022 +0700
+
+    halo perkenalkan aku halaman utama
+
+commit 7ffe149f80bff85100491fee49dea7ef1d8e3f1b
+Author: 1tiara <nurfadhilahmutiara@gmail.com>
+Date:   Thu Jul 7 10:39:03 2022 +0700
+
+    removing first.txt
+
+commit 231031da785403ea987afa89202901678b564296
+Author: 1tiara <nurfadhilahmutiara@gmail.com>
+Date:   Thu Jul 7 10:32:18 2022 +0700
+
+    adding second.txt
+
+commit 7e37ece4c99a3471695843a238c1a8a749c08019
+Author: 1tiara <nurfadhilahmutiara@gmail.com>
+Date:   Thu Jul 7 10:30:22 2022 +0700
+
+    adding first.txt
+
+TKJ@DESKTOP-84NGV0C MINGW64 ~/git-basic/1tiara (master)
+$ dir
+README.md
+
+TKJ@DESKTOP-84NGV0C MINGW64 ~/git-basic/1tiara (master)
+$ echo halo perkenalkan aku halaman utama >README.md
+
+TKJ@DESKTOP-84NGV0C MINGW64 ~/git-basic/1tiara (master)
+$ git add .
+warning: LF will be replaced by CRLF in 1tiara/README.md.
+The file will have its original line endings in your working directory
+
+TKJ@DESKTOP-84NGV0C MINGW64 ~/git-basic/1tiara (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   README.md
+
+
+TKJ@DESKTOP-84NGV0C MINGW64 ~/git-basic/1tiara (master)
+$ git init
+Initialized empty Git repository in C:/Users/TKJ/git-basic/1tiara/.git/
+
+TKJ@DESKTOP-84NGV0C MINGW64 ~/git-basic/1tiara (master)
+$ git commit -m "first commit"
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        README.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+TKJ@DESKTOP-84NGV0C MINGW64 ~/git-basic/1tiara (master)
+$ git add .
+warning: LF will be replaced by CRLF in README.md.
+The file will have its original line endings in your working directory
+
+TKJ@DESKTOP-84NGV0C MINGW64 ~/git-basic/1tiara (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   README.md
+
+
+TKJ@DESKTOP-84NGV0C MINGW64 ~/git-basic/1tiara (master)
+$ git commit -m "first commit"
+[master (root-commit) 4d57b56] first commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+
+TKJ@DESKTOP-84NGV0C MINGW64 ~/git-basic/1tiara (master)
+$ cat README.md
+hello world
+
+TKJ@DESKTOP-84NGV0C MINGW64 ~/git-basic/1tiara (master)
+$ git checkout README.md
+Updated 1 path from the index
+
+TKJ@DESKTOP-84NGV0C MINGW64 ~/git-basic/1tiara (master)
+$ cat README.md
+halo perkenalkan aku halaman utama
+
+TKJ@DESKTOP-84NGV0C MINGW64 ~/git-basic/1tiara (master)
+$ git branch cv
+
+TKJ@DESKTOP-84NGV0C MINGW64 ~/git-basic/1tiara (master)
+$ git branch
+  cv
+* master
+
+TKJ@DESKTOP-84NGV0C MINGW64 ~/git-basic/1tiara (master)
+$ git checkout cv
+Switched to branch 'cv'
+
+TKJ@DESKTOP-84NGV0C MINGW64 ~/git-basic/1tiara (cv)
+$ touch cv.txt
+
+TKJ@DESKTOP-84NGV0C MINGW64 ~/git-basic/1tiara (cv)
+$ echo ini adalah file cv>cv.txt
+
+TKJ@DESKTOP-84NGV0C MINGW64 ~/git-basic/1tiara (cv)
+$ cat cv>cv.txt
+cat: cv: No such file or directory
+
+TKJ@DESKTOP-84NGV0C MINGW64 ~/git-basic/1tiara (cv)
+$ cat cv.txt
+
+TKJ@DESKTOP-84NGV0C MINGW64 ~/git-basic/1tiara (cv)
+$ echo ini adalah file cv >cv.txt
+
+TKJ@DESKTOP-84NGV0C MINGW64 ~/git-basic/1tiara (cv)
+$ cat cv.txt
+ini adalah file cv
+
+TKJ@DESKTOP-84NGV0C MINGW64 ~/git-basic/1tiara (cv)
+$ git status
+On branch cv
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        cv.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+TKJ@DESKTOP-84NGV0C MINGW64 ~/git-basic/1tiara (cv)
+$ git add .
+warning: LF will be replaced by CRLF in cv.txt.
+The file will have its original line endings in your working directory
+
+TKJ@DESKTOP-84NGV0C MINGW64 ~/git-basic/1tiara (cv)
+$ git commit -m "initial CV"
+[cv d17d1d8] initial CV
+ 1 file changed, 1 insertion(+)
+ create mode 100644 cv.txt
+
+TKJ@DESKTOP-84NGV0C MINGW64 ~/git-basic/1tiara (cv)
+$ git add .
+warning: LF will be replaced by CRLF in cv.txt.
+The file will have its original line endings in your working directory
+
+TKJ@DESKTOP-84NGV0C MINGW64 ~/git-basic/1tiara (cv)
+$ git commit -m "ADAMAS"
+[cv 38319fe] ADAMAS
+ 1 file changed, 1 insertion(+)
+
+TKJ@DESKTOP-84NGV0C MINGW64 ~/git-basic/1tiara (cv)
+$ git add .
+warning: LF will be replaced by CRLF in cv.txt.
+The file will have its original line endings in your working directory
+
+TKJ@DESKTOP-84NGV0C MINGW64 ~/git-basic/1tiara (cv)
+$ git commit -m "JNY"
+[cv 8ddabfa] JNY
+ 1 file changed, 1 insertion(+)
+
+TKJ@DESKTOP-84NGV0C MINGW64 ~/git-basic/1tiara (cv)
+$ git add .
+warning: LF will be replaced by CRLF in cv.txt.
+The file will have its original line endings in your working directory
+
+TKJ@DESKTOP-84NGV0C MINGW64 ~/git-basic/1tiara (cv)
+$ git commit -m "MOOPS"
+[cv 8fc5751] MOOPS
+ 1 file changed, 1 insertion(+)
+
+TKJ@DESKTOP-84NGV0C MINGW64 ~/git-basic/1tiara (cv)
+$ git checkout master
+Switched to branch 'master'
+
+TKJ@DESKTOP-84NGV0C MINGW64 ~/git-basic/1tiara (master)
+$ git add .
+
+TKJ@DESKTOP-84NGV0C MINGW64 ~/git-basic/1tiara (master)
+$ git commit -m "update master pertama"
+[master a5c129e] update master pertama
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+TKJ@DESKTOP-84NGV0C MINGW64 ~/git-basic/1tiara (master)
+$ git log
+commit a5c129ea2f16e3dc4e45a50f51e4a8d7b481e042 (HEAD -> master)
+Author: 1tiara <nurfadhilahmutiara@gmail.com>
+Date:   Thu Jul 7 11:33:38 2022 +0700
+
+    update master pertama
+
+commit 4d57b5678077b5b94bf7e6d50361c328d9c73cf2
+Author: 1tiara <nurfadhilahmutiara@gmail.com>
+Date:   Thu Jul 7 11:20:02 2022 +0700
+
+    first commit
+
+TKJ@DESKTOP-84NGV0C MINGW64 ~/git-basic/1tiara (master)
+$ git merge cv
+Merge made by the 'ort' strategy.
+ cv.txt | 4 ++++
+ 1 file changed, 4 insertions(+)
+ create mode 100644 cv.txt
+
+TKJ@DESKTOP-84NGV0C MINGW64 ~/git-basic/1tiara (master)
+$
